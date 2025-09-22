@@ -5,20 +5,20 @@ import { createHash } from 'node:crypto'
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
 const redis = new Redis()
 
-app.get('/:tld', async request => {
-  const tld = request.params.tld
-  const cached = await redis.get(tld)
+app.get('/:path', async request => {
+  const path = request.params.path
+  const cached = await redis.get(path)
 
   if (cached) {
     return { hash: cached }
   }
 
-  const res = await fetch(`https://example.${tld}/`)
+  const res = await fetch(`http://127.0.0.1:3001/${path}`)
   const hash = createHash('sha256')
     .update(await res.text())
     .digest('hex')
 
-  await redis.set(tld, hash, 'EX', 60) // Cache for 1 minute
+  await redis.set(path, hash, 'EX', 15) // Cache for 1 minute
 
   return { hash }
 })

@@ -1,11 +1,11 @@
 import autocannon from 'autocannon'
 
-const routes = ['/net', '/org', '/com']
+const routes = ['/alpha', '/bravo', '/charlie', '/delta', '/echo']
 let requestIndex = 0
 
 const result = await autocannon({
   url: `http://127.0.0.1:3000`,
-  connections: 10,
+  connections: 100,
   pipelining: 1,
   duration: parseInt(process.env.DURATION || '10'),
   requests: [

@@ -9,8 +9,8 @@ const cache = createCache({
   storage: { type: 'redis', options: { client: new Redis({ enableAutoPipelining: true }) } }
 })
 
-cache.define('hash', async tld => {
-  const res = await fetch(`https://example.${tld}/`)
+cache.define('hash', async path => {
+  const res = await fetch(`http://127.0.0.1:3001/${path}`)
   const hash = createHash('sha256')
     .update(await res.text())
     .digest('hex')
@@ -18,8 +18,8 @@ cache.define('hash', async tld => {
   return { hash }
 })
 
-app.get('/:tld', async request => {
-  return cache.hash(request.params.tld)
+app.get('/:path', async request => {
+  return cache.hash(request.params.path)
 })
 
 app.listen({ port: 3000 }, () => {

@@ -7,8 +7,8 @@ const store = new RedisCacheStore({})
 const agent = new Agent().compose(interceptors.cache({ store }))
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
 
-app.get('/:tld', async request => {
-  const res = await agent.request({ origin: `https://example.${request.params.tld}`, method: 'GET', path: '/' })
+app.get('/:path', async request => {
+  const res = await agent.request({ origin: `http://127.0.0.1:3001/${request.params.path}`, method: 'GET', path: '/' })
   const hash = createHash('sha256')
     .update(await res.body.text())
     .digest('hex')

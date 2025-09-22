@@ -2,8 +2,8 @@ import fastify from 'fastify'
 
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
 
-app.get('/:tld', async request => {
-  // TODO: Get the https://example.$TLD/ and compute its SHA256 hash
+app.get('/:path', async request => {
+  // TODO: Get the http://127.0.0.1:3001/$path and compute its SHA256 hash
 
   return { hash }
 })

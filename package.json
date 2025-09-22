@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "caching:verify": "node ./caching/verify.js",
+    "caching:target": "node ./caching/target.js",
     "multithreading:verify": "node ./multithreading/verify.js"
   },
   "devDependencies": {

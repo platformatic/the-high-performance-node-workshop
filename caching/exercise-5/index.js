@@ -7,7 +7,7 @@ const store = new RedisCacheStore({})
 const agent = new Agent().compose(interceptors.cache({ store }))
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
 
-app.get('/:tld', async request => {
+app.get('/:path', async request => {
   // TODO: Fetch the resource using the agent
 
   const hash = createHash('sha256')
