@@ -1,0 +1,8 @@
+{
+  "$schema": "https://schemas.platformatic.dev/@platformatic/gateway/3.2.1.json",
+  "watch": true,
+  "gateway": {
+    "applications": [],
+    "refreshTimeout": 1000
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.platformatic.dev/@platformatic/runtime/3.2.1.json",
+  "watch": true,
+  "autoload": {
+    "path": "web",
+    "exclude": ["docs"]
+  },
+  "logger": {
+    "level": "{PLT_SERVER_LOGGER_LEVEL}"
+  },
+  "server": {
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PORT}"
+  },
+  "managementApi": "{PLT_MANAGEMENT_API}",
+  "telemetry": {
+    "applicationName": "my-app",
+    "exporter": {
+      "type": "otlp",
+      "options": {
+        "url": "http://localhost:4318/v1/traces"
+      }
+    }
+  }
+}

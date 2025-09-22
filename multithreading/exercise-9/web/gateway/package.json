@@ -1,0 +1,16 @@
+{
+  "name": "gateway",
+  "scripts": {
+    "start": "platformatic start",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "fastify": "^5.0.0"
+  },
+  "dependencies": {
+    "@platformatic/gateway": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
