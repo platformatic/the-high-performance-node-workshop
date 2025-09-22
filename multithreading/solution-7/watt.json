@@ -12,6 +12,6 @@
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}"
   },
-  "managementApi": "{PLT_MANAGEMENT_API}"
+  "managementApi": "{PLT_MANAGEMENT_API}",
+  "workers": 5
 }
-
