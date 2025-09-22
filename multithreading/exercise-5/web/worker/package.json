@@ -1,0 +1,9 @@
+{
+  "name": "worker",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@platformatic/node": "^3.2.1"
+  },
+  "devDependencies": {}
+}

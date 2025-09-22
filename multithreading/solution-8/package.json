@@ -1,0 +1,20 @@
+{
+  "name": "solution-5",
+  "scripts": {
+    "start": "platformatic start"
+  },
+  "devDependencies": {
+    "fastify": "^5.0.0"
+  },
+  "dependencies": {
+    "@platformatic/flame": "^1.0.0",
+    "@platformatic/runtime": "^3.2.1",
+    "@platformatic/wattpm-pprof-capture": "^3.5.1",
+    "autocannon": "^8.0.0",
+    "platformatic": "^3.2.1",
+    "wattpm": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

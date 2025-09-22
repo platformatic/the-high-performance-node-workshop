@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "caching:verify": "node ./caching/verify.js",
+    "multithreading:verify": "node ./multithreading/verify.js"
+  },
+  "devDependencies": {
+    "autocannon": "^8.0.0",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "@platformatic/gateway": "^3.2.1",
+    "@platformatic/node": "^3.2.1",
+    "fastify": "^5.6.0",
+    "wattpm": "^3.2.1"
+  }
+}
