@@ -13,6 +13,5 @@
   },
   "engines": {
     "node": ">=22.19.0"
-  },
-  "metrics": true
+  }
 }

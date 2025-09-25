@@ -13,13 +13,5 @@
     "port": "{PORT}"
   },
   "managementApi": "{PLT_MANAGEMENT_API}",
-  "telemetry": {
-    "applicationName": "my-app",
-    "exporter": {
-      "type": "otlp",
-      "options": {
-        "url": "http://localhost:4318/v1/traces"
-      }
-    }
-  }
+  "metrics": true
 }
