@@ -5,8 +5,11 @@ import { createHash } from 'node:crypto'
 
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
 const cache = createCache({
-  ttl: 60,
-  storage: { type: 'redis', options: { client: new Redis({ enableAutoPipelining: true }) } }
+  ttl: 5,
+  storage: {
+    type: 'redis',
+    options: { client: new Redis({ port: process.env.USE_PROXY ? 16379 : 6379, enableAutoPipelining: true }) }
+  }
 })
 
 cache.define('hash', async path => {

@@ -3,7 +3,7 @@ import Redis from 'ioredis'
 import { createHash } from 'node:crypto'
 
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
-const redis = new Redis({ enableAutoPipelining: true })
+const redis = new Redis({ port: process.env.USE_PROXY ? 16379 : 6379, enableAutoPipelining: true })
 
 app.get('/:path', async request => {
   const path = request.params.path
@@ -18,7 +18,7 @@ app.get('/:path', async request => {
     .update(await res.text())
     .digest('hex')
 
-  await redis.set(path, hash, 'EX', 15) // Cache for 15 seconds
+  await redis.set(path, hash, 'EX', 5) // Cache for 5 seconds
 
   return { hash }
 })

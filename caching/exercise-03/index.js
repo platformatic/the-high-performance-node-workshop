@@ -20,7 +20,7 @@ app.get('/:path', async request => {
     .update(await res.text())
     .digest('hex')
 
-  await redis.set(path, hash, 'EX', 15) // Cache for 15 seconds
+  await redis.set(path, hash, 'EX', 5) // Cache for 5 seconds
 
   return { hash }
 })

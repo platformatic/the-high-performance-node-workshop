@@ -7,6 +7,6 @@
   "dependencies": {
     "@platformatic/flame": "^1.0.0",
     "autocannon": "^8.0.0",
-    "fastify": "^5.0.0"
+    "fastify": "^5.6.0"
   }
 }

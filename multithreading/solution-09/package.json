@@ -4,15 +4,15 @@
     "start": "platformatic start"
   },
   "devDependencies": {
-    "fastify": "^5.0.0"
+    "fastify": "^5.6.0"
   },
   "dependencies": {
     "@platformatic/flame": "^1.0.0",
-    "@platformatic/runtime": "^3.2.1",
+    "@platformatic/runtime": "^3.6.0",
     "@platformatic/wattpm-pprof-capture": "^3.5.1",
     "autocannon": "^8.0.0",
-    "platformatic": "^3.2.1",
-    "wattpm": "^3.2.1"
+    "platformatic": "^3.6.0",
+    "wattpm": "^3.6.0"
   },
   "engines": {
     "node": ">=22.19.0"

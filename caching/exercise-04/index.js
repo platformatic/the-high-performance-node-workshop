@@ -4,7 +4,7 @@ import Redis from 'ioredis'
 
 const app = fastify({ logger: process.env.VERBOSE === 'true' })
 const cache = createCache({
-  ttl: 60,
+  ttl: 5,
   storage: { type: 'redis', options: { client: new Redis({ enableAutoPipelining: true }) } }
 })
 
