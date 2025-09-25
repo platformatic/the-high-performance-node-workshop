@@ -3,7 +3,6 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
-    "@platformatic/node": "^3.2.1"
-  },
-  "devDependencies": {}
+    "@platformatic/node": "^3.6.0"
+  }
 }
