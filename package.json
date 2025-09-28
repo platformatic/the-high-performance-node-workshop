@@ -5,6 +5,7 @@
     "caching:verify": "node ./caching/verify.js",
     "caching:target": "node ./caching/target.js",
     "caching:proxy": "node ./caching/proxy.js",
+    "delay-redis": "docker run --net=host kffl/speedbump:latest --latency=10ms --port=16379 localhost:6379",
     "multithreading:verify": "node ./multithreading/verify.js",
     "multithreading:verify:watt": "node ./multithreading/verify-watt.js"
   },
